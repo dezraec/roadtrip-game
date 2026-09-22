@@ -1,7 +1,18 @@
 [gd_scene format=3 uid="uid://ccm6apa6d0xts"]
 
-[ext_resource type="Texture2D" uid="uid://b8s83dfrev7bq" path="res://icon.svg" id="1_6cji5"]
 [ext_resource type="Script" uid="uid://dubtq46mjrmd7" path="res://van.gd" id="1_8opdr"]
+[ext_resource type="Texture2D" uid="uid://cfydpvmrdo8j3" path="res://Character Assets/Van.png" id="3_lvfqf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tnpr2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_lvfqf")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yaxba"]
 size = Vector2(284, 126)
@@ -9,9 +20,8 @@ size = Vector2(284, 126)
 [node name="van" type="CharacterBody2D" unique_id=914730358]
 script = ExtResource("1_8opdr")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=475155148]
-scale = Vector2(2.21875, 1)
-texture = ExtResource("1_6cji5")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=948891785]
+sprite_frames = SubResource("SpriteFrames_tnpr2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=348272044]
 shape = SubResource("RectangleShape2D_yaxba")
