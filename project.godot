@@ -48,6 +48,12 @@ Jump={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="World Geometry"
+2d_physics/layer_2="Obstacles"
+2d_physics/layer_3="Car"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

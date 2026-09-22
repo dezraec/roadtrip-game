@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://ccm6apa6d0xts" path="res://van.tscn" id="1_esc74"]
 [ext_resource type="Texture2D" uid="uid://b8s83dfrev7bq" path="res://icon.svg" id="2_0jrb1"]
+[ext_resource type="PackedScene" uid="uid://cp4r3oauhjm3x" path="res://road_spikes.tscn" id="3_0jrb1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7onm5"]
 size = Vector2(128, 130)
@@ -10,6 +11,7 @@ size = Vector2(128, 130)
 
 [node name="van" parent="." unique_id=914730358 instance=ExtResource("1_esc74")]
 position = Vector2(181, 98)
+collision_layer = 4
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=337192347]
 position = Vector2(432, 578)
@@ -30,3 +32,6 @@ texture = ExtResource("2_0jrb1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1138048760]
 shape = SubResource("RectangleShape2D_7onm5")
+
+[node name="RoadSpikes" parent="." unique_id=1309468944 instance=ExtResource("3_0jrb1")]
+position = Vector2(731, 410)
