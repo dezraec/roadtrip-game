@@ -31,5 +31,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, neutral_braking)
 
 	velocity.x = clamp(velocity.x, -MAX_SPEED, MAX_SPEED)
+	if direction != 0:
+		$Sprite2D.flip_h = velocity.x < 0
 
 	move_and_slide()

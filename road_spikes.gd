@@ -18,16 +18,20 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		
 		await get_tree().process_frame
 		
-		ragdoll.global_position = body.global_position + Vector2(0, -50)
-		body.process_mode = Node.PROCESS_MODE_DISABLED
+		ragdoll.global_position = body.global_position + Vector2(0, -80)
+
 		
-		var impulse = Vector2.from_angle(-PI/4 + randf() * PI/8) * 100
-		
+		var impulse = Vector2.from_angle(
+			-PI/2 + (sign(body.velocity.x) * PI/5)
+		) * 100
+		impulse.y = -abs(impulse.y)
 		print(impulse)
 		
 		ragdoll.apply_impulse(impulse)
-		ragdoll.apply_torque_impulse(700*9)
+		ragdoll.apply_torque_impulse(7000 * 2 * sign(body.velocity.x))
+		ragdoll.find_child("Sprite2D").flip_h = body.find_child("Sprite2D").flip_h
 		
+		body.process_mode = Node.PROCESS_MODE_DISABLED
 		await get_tree().create_timer(1).timeout
 		
 		get_tree().change_scene_to_file("res://gameover.tscn")
