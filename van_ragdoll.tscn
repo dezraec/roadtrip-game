@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://1pf4ua33bxm8"]
 
-[ext_resource type="Texture2D" uid="uid://b8s83dfrev7bq" path="res://icon.svg" id="1_gfjmy"]
+[ext_resource type="Texture2D" uid="uid://cfydpvmrdo8j3" path="res://Character Assets/Van.png" id="1_gfjmy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ua1wk"]
 size = Vector2(284, 126)
@@ -9,7 +9,7 @@ size = Vector2(284, 126)
 mass = 0.1
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=92011134]
-scale = Vector2(2.21875, 1)
+scale = Vector2(1.272, 1)
 texture = ExtResource("1_gfjmy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2047283007]

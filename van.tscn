@@ -15,7 +15,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yaxba"]
-size = Vector2(284, 126)
+size = Vector2(210, 108)
 
 [node name="van" type="CharacterBody2D" unique_id=914730358]
 script = ExtResource("1_8opdr")
@@ -24,6 +24,7 @@ script = ExtResource("1_8opdr")
 sprite_frames = SubResource("SpriteFrames_tnpr2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=348272044]
+position = Vector2(8, 0)
 shape = SubResource("RectangleShape2D_yaxba")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1107042478]

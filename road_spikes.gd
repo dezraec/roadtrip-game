@@ -18,14 +18,12 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		ragdoll.global_position = body.global_position + Vector2(0, -50)
 		body.process_mode = Node.PROCESS_MODE_DISABLED
 		
-	
-		
 		var impulse = Vector2.from_angle(-PI/4 + randf() * PI/8) * 100
 		
 		print(impulse)
 		
 		ragdoll.apply_impulse(impulse)
-		ragdoll.apply_torque_impulse(700)
+		ragdoll.apply_torque_impulse(700*9)
 		
 		await get_tree().create_timer(1).timeout
 		
