@@ -2,6 +2,9 @@ extends Node2D
 
 var van_ragdoll_scn = preload("res://van_ragdoll.tscn")
 
+func _defer(ragdoll):
+	get_tree().current_scene.add_child(ragdoll)
+
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D and body.name == "van":
 		
@@ -11,7 +14,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		body.hide()
 		
 		var ragdoll: RigidBody2D = van_ragdoll_scn.instantiate()
-		get_tree().current_scene.add_child(ragdoll)
+		call_deferred("_defer", ragdoll)
 		
 		await get_tree().process_frame
 		
