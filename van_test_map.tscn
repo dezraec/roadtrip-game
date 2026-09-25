@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://ccm6apa6d0xts" path="res://van.tscn" id="1_esc74"]
 [ext_resource type="Texture2D" uid="uid://b8s83dfrev7bq" path="res://icon.svg" id="2_0jrb1"]
 [ext_resource type="PackedScene" uid="uid://c7kk7m3fhjk1u" path="res://road_spikes.tscn" id="3_0jrb1"]
+[ext_resource type="PackedScene" uid="uid://b3wtc58vwp3tl" path="res://police.tscn" id="4_t7mtd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7onm5"]
 size = Vector2(128, 130)
@@ -35,3 +36,6 @@ shape = SubResource("RectangleShape2D_7onm5")
 
 [node name="RoadSpikes" parent="." unique_id=1309468944 instance=ExtResource("3_0jrb1")]
 position = Vector2(731, 410)
+
+[node name="police" parent="." unique_id=1933344271 instance=ExtResource("4_t7mtd")]
+position = Vector2(580, 256)

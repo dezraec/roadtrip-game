@@ -7,6 +7,9 @@ extends CharacterBody2D
 
 const MAX_SPEED = 700.0
 
+func _ready() -> void: # Start
+	VanLocator.van
+
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
@@ -29,6 +32,7 @@ func _physics_process(delta: float) -> void:
 		
 	else:
 		velocity.x = move_toward(velocity.x, 0, neutral_braking)
+	
 
 	velocity.x = clamp(velocity.x, -MAX_SPEED, MAX_SPEED)
 	if direction != 0:

@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://boyqo6vsunmhv"]
+
+[ext_resource type="Texture2D" uid="uid://coolbqtrtesl5" path="res://Character Assets/da_police.png" id="1_efjuj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6lc5d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_efjuj")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tnpr2"]
+size = Vector2(291, 169)
+
+[node name="police" type="Area2D" unique_id=1933344271]
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=679655336]
+sprite_frames = SubResource("SpriteFrames_6lc5d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1822638392]
+position = Vector2(-0.5, -1.5)
+shape = SubResource("RectangleShape2D_tnpr2")
