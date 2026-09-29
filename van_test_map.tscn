@@ -6,12 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://b3wtc58vwp3tl" path="res://police.tscn" id="4_t7mtd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7onm5"]
-size = Vector2(128, 130)
+size = Vector2(128.97095, 130)
 
 [node name="VanTestMap" type="Node2D" unique_id=1714181468]
 
 [node name="van" parent="." unique_id=914730358 instance=ExtResource("1_esc74")]
-position = Vector2(181, 98)
+position = Vector2(397, 111)
 collision_layer = 4
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=337192347]
@@ -22,6 +22,7 @@ scale = Vector2(6.879999, 1)
 texture = ExtResource("2_0jrb1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=68833315]
+position = Vector2(-0.4854622, 0)
 shape = SubResource("RectangleShape2D_7onm5")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1994002219]
@@ -38,4 +39,4 @@ shape = SubResource("RectangleShape2D_7onm5")
 position = Vector2(731, 410)
 
 [node name="police" parent="." unique_id=1933344271 instance=ExtResource("4_t7mtd")]
-position = Vector2(580, 256)
+position = Vector2(101, 420)

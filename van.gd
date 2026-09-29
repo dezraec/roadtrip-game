@@ -4,16 +4,23 @@ extends CharacterBody2D
 @export var neutral_braking: float = 5
 @export var braking: float = 30
 @export var jump_velocity = -450.0
+var deathZone: float = 550.0 
+
 
 const MAX_SPEED = 700.0
 
 func _ready() -> void: # Start
 	VanLocator.van
+	
+	# Handle falling off the map
+	if global_position.y >= deathZone:
+		get_tree().change_scene_to_file("res://gameover.tscn")
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+
 
 	# Handle jump.
 	if Input.is_action_just_pressed("Jump") and is_on_floor():
@@ -39,3 +46,5 @@ func _physics_process(delta: float) -> void:
 		$Sprite2D.flip_h = velocity.x < 0
 
 	move_and_slide()
+	
+	

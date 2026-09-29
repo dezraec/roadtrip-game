@@ -6,6 +6,7 @@ func _physics_process(delta: float) -> void:
 	pass
 	var vanRef = VanLocator.van # This is police's own local reference to the van's location.
 	
+	
 	# TO-DO:
 	# Find direction and magnitude from polic to van
 	# Use that to apply_force()
