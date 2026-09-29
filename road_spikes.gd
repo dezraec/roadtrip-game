@@ -35,4 +35,4 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		body.process_mode = Node.PROCESS_MODE_DISABLED
 		await get_tree().create_timer(1).timeout
 		
-		get_tree().change_scene_to_file("res://gameover.tscn")
+		get_tree().change_scene_to_file("res://Scenes/gameover.tscn")
