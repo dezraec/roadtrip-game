@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cp4r3oauhjm3x"]
+[gd_scene format=3 uid="uid://c7kk7m3fhjk1u"]
 
 [ext_resource type="Script" uid="uid://doqolakqbjrap" path="res://road_spikes.gd" id="1_0b6lg"]
 [ext_resource type="Texture2D" uid="uid://b8s83dfrev7bq" path="res://icon.svg" id="1_dd12r"]

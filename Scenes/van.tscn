@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cvk3rawtgroww"]
+[gd_scene format=3 uid="uid://ccm6apa6d0xts"]
 
 [ext_resource type="Script" uid="uid://dubtq46mjrmd7" path="res://van.gd" id="1_8opdr"]
 [ext_resource type="Texture2D" uid="uid://cfydpvmrdo8j3" path="res://Character Assets/Van.png" id="3_lvfqf"]

@@ -1,13 +1,14 @@
 extends CharacterBody2D
 
-@export var accelaration: float = 10
+@export var accelaration: float = 15
 @export var neutral_braking: float = 5
 @export var braking: float = 30
 @export var jump_velocity = -450.0
 var deathZone: float = 550.0 
 
 
-const MAX_SPEED = 700.0
+const MAX_SPEED = 500.0
+const PUSH_FORCE = 50
 
 func _ready() -> void: # Start
 	VanLocator.van
@@ -15,6 +16,7 @@ func _ready() -> void: # Start
 	# Handle falling off the map
 	if global_position.y >= deathZone:
 		get_tree().change_scene_to_file("res://gameover.tscn")
+	VanLocator.van = self
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -47,4 +49,7 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	
-	
+	for i in get_slide_collision_count():
+		var c = get_slide_collision(i)
+		if c.get_collider() is RigidBody2D:
+			c.get_collider().apply_central_impulse(-c.get_normal() * PUSH_FORCE)
