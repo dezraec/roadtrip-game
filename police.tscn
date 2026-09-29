@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://b3wtc58vwp3tl"]
+[gd_scene format=3 uid="uid://dpefkygnypwsj"]
 
 [ext_resource type="Script" uid="uid://ju5r202pshnm" path="res://police.gd" id="1_cw7eu"]
 [ext_resource type="Texture2D" uid="uid://coolbqtrtesl5" path="res://Character Assets/da_police.png" id="1_efjuj"]

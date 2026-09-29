@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dypk53v7ijtlt"]
+
+[ext_resource type="Texture2D" uid="uid://cfydpvmrdo8j3" path="res://Character Assets/Van.png" id="1_gfjmy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ua1wk"]
+size = Vector2(284, 126)
+
+[node name="van_ragdoll" type="RigidBody2D" unique_id=1351587153]
+mass = 0.1
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=92011134]
+scale = Vector2(1.272, 1)
+texture = ExtResource("1_gfjmy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2047283007]
+shape = SubResource("RectangleShape2D_ua1wk")

@@ -1,9 +1,9 @@
-[gd_scene format=3 uid="uid://d0bc8121jkjpf"]
+[gd_scene format=3 uid="uid://gk5rdv04eihy"]
 
-[ext_resource type="PackedScene" uid="uid://ccm6apa6d0xts" path="res://Scenes/van.tscn" id="1_esc74"]
+[ext_resource type="PackedScene" uid="uid://cvk3rawtgroww" path="res://van.tscn" id="1_esc74"]
 [ext_resource type="Texture2D" uid="uid://b8s83dfrev7bq" path="res://icon.svg" id="2_0jrb1"]
-[ext_resource type="PackedScene" uid="uid://c7kk7m3fhjk1u" path="res://Scenes/road_spikes.tscn" id="3_0jrb1"]
-[ext_resource type="PackedScene" uid="uid://b3wtc58vwp3tl" path="res://Scenes/police.tscn" id="4_t7mtd"]
+[ext_resource type="PackedScene" uid="uid://cp4r3oauhjm3x" path="res://road_spikes.tscn" id="3_0jrb1"]
+[ext_resource type="PackedScene" path="res://police.tscn" id="4_t7mtd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7onm5"]
 size = Vector2(128, 130)

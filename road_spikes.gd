@@ -27,6 +27,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		impulse.y = -abs(impulse.y)
 		print(impulse)
 		
+		
 		ragdoll.apply_impulse(impulse)
 		ragdoll.apply_torque_impulse(7000 * 2 * sign(body.velocity.x))
 		ragdoll.find_child("Sprite2D").flip_h = body.find_child("Sprite2D").flip_h
