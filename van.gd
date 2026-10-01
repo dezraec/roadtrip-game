@@ -14,8 +14,10 @@ func _ready() -> void: # Start
 	VanLocator.van
 	
 	# Handle falling off the map
-	if global_position.y >= deathZone:
-		get_tree().change_scene_to_file("res://gameover.tscn")
+	#if global_position.y >= deathZone:
+		#get_tree().change_scene_to_file("res://gameover.tscn")
+		
+		#Use a collisioon box as the Death Zone
 	VanLocator.van = self
 
 func _physics_process(delta: float) -> void:
@@ -53,3 +55,7 @@ func _physics_process(delta: float) -> void:
 		var c = get_slide_collision(i)
 		if c.get_collider() is RigidBody2D:
 			c.get_collider().apply_central_impulse(-c.get_normal() * PUSH_FORCE)
+
+func _on_visible_on_screen_notifier_2d_screen_exited():
+	queue_free()
+	get_tree().change_scene_to_file("res://gameover.tscn")

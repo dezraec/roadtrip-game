@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b8s83dfrev7bq" path="res://icon.svg" id="2_0jrb1"]
 [ext_resource type="PackedScene" uid="uid://c7kk7m3fhjk1u" path="res://Scenes/road_spikes.tscn" id="3_0jrb1"]
 [ext_resource type="PackedScene" uid="uid://b3wtc58vwp3tl" path="res://Scenes/police.tscn" id="4_t7mtd"]
+[ext_resource type="PackedScene" uid="uid://wr5ou2n2gp00" path="res://Scenes/death_zone.tscn" id="5_pr3wy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7onm5"]
 size = Vector2(128, 130)
@@ -79,3 +80,6 @@ position = Vector2(-1542, 1021)
 
 [node name="police3" parent="." unique_id=1637022646 instance=ExtResource("4_t7mtd")]
 position = Vector2(-324, 176)
+
+[node name="DeathZone" parent="." unique_id=984632422 instance=ExtResource("5_pr3wy")]
+position = Vector2(-584, 1065)

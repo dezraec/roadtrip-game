@@ -34,3 +34,5 @@ position = Vector2(-6, 1)
 offset = Vector2(200, 0)
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=2100045429]
