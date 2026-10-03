@@ -1,36 +1,59 @@
 [gd_scene format=3 uid="uid://c4jdrak17b1j1"]
 
-[ext_resource type="Texture2D" uid="uid://dw2p6omhrgvbi" path="res://MenuAssets/button_rectangle_gradient.png" id="1_c4tk2"]
-[ext_resource type="Script" uid="uid://c0tb5mignlygy" path="res://main_menu.gd" id="1_rmbjf"]
+[ext_resource type="Script" uid="uid://crbmkd8n6xmmm" path="res://Scripts/main_menu.gd" id="1_c4tk2"]
+[ext_resource type="Texture2D" uid="uid://dw2p6omhrgvbi" path="res://MenuAssets/button_rectangle_gradient.png" id="2_rmbjf"]
 
-[node name="MainMenu" type="Node2D" unique_id=1913171774]
-script = ExtResource("1_rmbjf")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=2104877133]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -102.0
-offset_top = -12.0
-offset_right = 1818.0
-offset_bottom = 488.0
+[node name="MainMenu" type="Control" unique_id=694774606]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_font_sizes/bold_font_size = 100
-text = "TRANSPORTATION GAME"
+script = ExtResource("1_c4tk2")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1519228065]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=488025242]
+layout_mode = 2
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=826663109]
+layout_mode = 2
+theme_override_font_sizes/font_size = 200
+text = "Road Trip Rush"
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
 
-[node name="Button" type="Button" parent="." unique_id=121033695]
-offset_left = 672.0
-offset_top = 440.0
-offset_right = 1064.0
-offset_bottom = 576.0
-theme_override_font_sizes/font_size = 70
+[node name="startButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1893142846]
+layout_mode = 2
+size_flags_horizontal = 4
+accessibility_name = "Start Button"
+theme_override_font_sizes/font_size = 50
+theme_override_icons/icon = ExtResource("2_rmbjf")
 text = "START"
-icon = ExtResource("1_c4tk2")
 icon_alignment = 1
+
+[node name="quitButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1871428446]
+layout_mode = 2
+size_flags_horizontal = 4
+accessibility_name = "Quit Button"
+theme_override_font_sizes/font_size = 50
+theme_override_icons/icon = ExtResource("2_rmbjf")
+text = "QUIT"
+icon_alignment = 1
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/startButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/quitButton" to="." method="_on_quit_button_pressed"]

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c4djsxrfoa2w0"]
 
-[ext_resource type="Script" uid="uid://c3bk2lrgqlpli" path="res://gameover.gd" id="1_4nh4k"]
+[ext_resource type="Script" uid="uid://c3bk2lrgqlpli" path="res://Scripts/gameover.gd" id="1_4nh4k"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_7onm5"]
 font_size = 30

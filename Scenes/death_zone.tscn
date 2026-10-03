@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://wr5ou2n2gp00"]
 
-[ext_resource type="Script" uid="uid://1gwp40qrkccm" path="res://death_zone.gd" id="1_0d2dr"]
+[ext_resource type="Script" uid="uid://1gwp40qrkccm" path="res://Scripts/death_zone.gd" id="1_0d2dr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wrp4u"]
 size = Vector2(12651, 103)

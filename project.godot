@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="roadtrip_game"
-run/main_scene="uid://d0bc8121jkjpf"
+run/main_scene="uid://c4jdrak17b1j1"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
