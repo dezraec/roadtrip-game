@@ -1,4 +1,4 @@
-extends Control
+extends Node2D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -11,9 +11,6 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_start_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/map.tscn")
-
-
-func _on_quit_button_pressed() -> void:
-	get_tree().quit()
+func _on_area_2d_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
+	if body is CharacterBody2D:
+		get_tree().change_scene_to_file("res://Scenes/win_scene.tscn")

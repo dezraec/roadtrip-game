@@ -2,4 +2,8 @@ extends Control
 
 
 func _on_restart_pressed() -> void:
-	get_tree().change_scene_to_file("res://van_test_map.tscn")
+	get_tree().change_scene_to_file("res://Scenes/map.tscn")
+
+
+func _on_button_pressed() -> void:
+	get_tree().quit()

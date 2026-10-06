@@ -65,4 +65,19 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Restart"
 
+[node name="Button" type="Button" parent="." unique_id=675572342]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = 36.0
+offset_right = 8.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "GIVE UP >:("
+
 [connection signal="pressed" from="restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

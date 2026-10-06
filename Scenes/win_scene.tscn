@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://cmfitttoymjkc"]
+
+[ext_resource type="Script" uid="uid://xnamt66o8a03" path="res://Scripts/win_scene.gd" id="1_eafqm"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7onm5"]
+font_size = 114
+
+[node name="WinScene" type="Control" unique_id=1462352608]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eafqm")
+
+[node name="Label" type="Label" parent="." unique_id=1741782741]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -295.0
+offset_top = -226.0
+offset_right = 295.0
+offset_bottom = -70.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "YOU WON!"
+label_settings = SubResource("LabelSettings_7onm5")
+
+[node name="Button" type="Button" parent="." unique_id=73875691]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -15.5
+offset_right = 44.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 52
+text = "Play Again"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
