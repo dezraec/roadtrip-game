@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://cmfitttoymjkc"]
 
 [ext_resource type="Script" uid="uid://xnamt66o8a03" path="res://Scripts/win_scene.gd" id="1_eafqm"]
+[ext_resource type="FontFile" uid="uid://biibowtdn8r0j" path="res://FasterOne-Regular.ttf" id="2_hea1w"]
+[ext_resource type="AudioStream" uid="uid://cp3rugdcm5cdw" path="res://SoundFX/Victory Sound Effect.mp3" id="3_b5jpj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_7onm5"]
 font_size = 114
@@ -27,6 +29,7 @@ offset_right = 295.0
 offset_bottom = -70.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_hea1w")
 text = "YOU WON!"
 label_settings = SubResource("LabelSettings_7onm5")
 
@@ -43,7 +46,11 @@ offset_right = 44.0
 offset_bottom = 15.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_hea1w")
 theme_override_font_sizes/font_size = 52
 text = "Play Again"
+
+[node name="WinSound" type="AudioStreamPlayer2D" parent="." unique_id=2084724068]
+stream = ExtResource("3_b5jpj")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
