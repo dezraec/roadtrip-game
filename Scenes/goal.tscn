@@ -19,7 +19,7 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1985125584]
-position = Vector2(0, -10)
+position = Vector2(-1, -9)
 shape = SubResource("RectangleShape2D_7onm5")
 
 [connection signal="body_shape_entered" from="Area2D" to="." method="_on_area_2d_body_shape_entered"]
