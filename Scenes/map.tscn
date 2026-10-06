@@ -30,7 +30,7 @@ position = Vector2(2816, 368)
 position = Vector2(1764, -187)
 
 [node name="RoadSpikes3" parent="." unique_id=589900397 instance=ExtResource("5_np2xp")]
-position = Vector2(492, -15)
+position = Vector2(1024, -112)
 
 [node name="police" parent="." unique_id=818205082 instance=ExtResource("5_q0mm3")]
 position = Vector2(-264, -200)
