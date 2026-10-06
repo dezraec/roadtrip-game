@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://worljynpw3db" path="res://Scripts/goal.gd" id="1_s0pnd"]
 [ext_resource type="Texture2D" uid="uid://2fwpovruid2u" path="res://Character Assets/goal-red-flag-icon-free-png-975287973.png" id="2_2lgk0"]
-[ext_resource type="AudioStream" uid="uid://cp3rugdcm5cdw" path="res://SoundFX/Victory Sound Effect.mp3" id="3_2lgk0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7onm5"]
 size = Vector2(4, 40)
@@ -22,8 +21,5 @@ collision_mask = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1985125584]
 position = Vector2(-1, -9)
 shape = SubResource("RectangleShape2D_7onm5")
-
-[node name="WinSound" type="AudioStreamPlayer2D" parent="." unique_id=1741846192]
-stream = ExtResource("3_2lgk0")
 
 [connection signal="body_shape_entered" from="Area2D" to="." method="_on_area_2d_body_shape_entered"]
