@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c4jdrak17b1j1"]
 
 [ext_resource type="Script" uid="uid://crbmkd8n6xmmm" path="res://Scripts/main_menu.gd" id="1_c4tk2"]
+[ext_resource type="Texture2D" uid="uid://smrpg4mtwgd4" path="res://MapAssets/campervan-8-2295243569.jpg" id="2_00u4r"]
 [ext_resource type="FontFile" uid="uid://biibowtdn8r0j" path="res://FasterOne-Regular.ttf" id="2_b7rmo"]
 [ext_resource type="Texture2D" uid="uid://dw2p6omhrgvbi" path="res://MenuAssets/button_rectangle_gradient.png" id="2_rmbjf"]
 
@@ -12,6 +13,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_c4tk2")
+
+[node name="Campervan82295243569" type="Sprite2D" parent="." unique_id=355922853]
+position = Vector2(986.24994, 565)
+scale = Vector2(2.1883333, 1.98)
+texture = ExtResource("2_00u4r")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1519228065]
 layout_mode = 1

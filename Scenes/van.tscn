@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://dubtq46mjrmd7" path="res://van.gd" id="1_8opdr"]
 [ext_resource type="Texture2D" uid="uid://cfydpvmrdo8j3" path="res://Character Assets/Van.png" id="3_lvfqf"]
+[ext_resource type="AudioStream" uid="uid://b1bpam02ifcmt" path="res://SoundFX/tanweraman-car-throttle-static-337873.mp3" id="3_t03dw"]
+[ext_resource type="AudioStream" uid="uid://x4db13dm8gtg" path="res://SoundFX/freesound_community-idle-106494.mp3" id="4_7e8qm"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tnpr2"]
 animations = [{
@@ -34,3 +36,11 @@ position = Vector2(-6, 1)
 offset = Vector2(200, 0)
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
+
+[node name="Throttle" type="AudioStreamPlayer2D" parent="." unique_id=1864793970]
+stream = ExtResource("3_t03dw")
+parameters/looping = true
+
+[node name="Engine idle" type="AudioStreamPlayer2D" parent="." unique_id=1030344401]
+stream = ExtResource("4_7e8qm")
+parameters/looping = true

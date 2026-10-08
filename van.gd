@@ -48,6 +48,14 @@ func _physics_process(delta: float) -> void:
 	velocity.x = clamp(velocity.x, -MAX_SPEED, MAX_SPEED)
 	if direction != 0:
 		$Sprite2D.flip_h = velocity.x < 0
+		if not $Throttle.playing:
+			$Throttle.play(0.2)
+		
+		$"Engine idle".stop()
+	else:
+		$Throttle.stop()
+		if not $"Engine idle".playing:
+			$"Engine idle".play(0.2)
 
 	move_and_slide()
 	

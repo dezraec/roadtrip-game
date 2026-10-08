@@ -4,14 +4,17 @@ var van_ragdoll_scn = preload("res://van_ragdoll.tscn")
 
 func _defer(ragdoll):
 	get_tree().current_scene.add_child(ragdoll)
+	
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D and body.name == "van":
+		$Area2D.set_deferred("monitoring",false)
 		
 		if not is_instance_valid(body):
 			return
 		
 		body.hide()
+		body.process_mode = Node.PROCESS_MODE_DISABLED
 		
 		var ragdoll: RigidBody2D = van_ragdoll_scn.instantiate()
 		call_deferred("_defer", ragdoll)
@@ -27,13 +30,18 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		impulse.y = -abs(impulse.y)
 		print(impulse)
 		
-		$SpikeSound.play(2.0)
+		
+		$SpikeSound.play(2)
+		get_tree().create_timer(0.5).timeout.connect(
+			func ():
+				$SpikeSound.stop()
+		)
 		ragdoll.apply_impulse(impulse)
 		ragdoll.apply_torque_impulse(7000 * 2 * sign(body.velocity.x))
 		ragdoll.find_child("Sprite2D").flip_h = body.find_child("Sprite2D").flip_h
 		
 		
-		body.process_mode = Node.PROCESS_MODE_DISABLED
+
 		await get_tree().create_timer(1).timeout
 		
 		get_tree().change_scene_to_file("res://Scenes/gameover.tscn")

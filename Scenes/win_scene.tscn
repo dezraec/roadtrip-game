@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://xnamt66o8a03" path="res://Scripts/win_scene.gd" id="1_eafqm"]
 [ext_resource type="FontFile" uid="uid://biibowtdn8r0j" path="res://FasterOne-Regular.ttf" id="2_hea1w"]
+[ext_resource type="Texture2D" uid="uid://bx2k0a05kooru" path="res://MapAssets/crossing-the-mexican-border-by-car-header-image-727017954.jpg" id="2_knexo"]
 [ext_resource type="AudioStream" uid="uid://cp3rugdcm5cdw" path="res://SoundFX/Victory Sound Effect.mp3" id="3_b5jpj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_7onm5"]
@@ -15,6 +16,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_eafqm")
+
+[node name="CrossingTheMexicanBorderByCarHeaderImage727017954" type="Sprite2D" parent="." unique_id=1366655217]
+position = Vector2(964.49994, 533.5)
+scale = Vector2(1.6291667, 1.7793653)
+texture = ExtResource("2_knexo")
 
 [node name="Label" type="Label" parent="." unique_id=1741782741]
 layout_mode = 1
